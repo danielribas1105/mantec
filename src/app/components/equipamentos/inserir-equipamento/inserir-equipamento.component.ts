@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InserirEquipamentoComponent implements OnInit {
 
+  equipamento = {
+    tipo: 'Reator',
+    serie: 'REA001',
+    subestacao: 'Colinas',
+    dataEntrega: '01/01/2000',
+    tensao: '230',
+    fabricante: 'GE',
+    status: 'ATIVO',
+    observacao: ''
+  }
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  inserirEquipamento() {
+    alert("Equipamento salvo com sucesso!!!")
   }
 
 }
