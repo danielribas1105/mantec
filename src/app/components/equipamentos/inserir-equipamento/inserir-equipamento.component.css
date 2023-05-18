@@ -50,19 +50,7 @@
   margin: 0.5rem 0 2rem;
 }
 
-.container-tensao {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.container-fabricante {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-
-.container-status {
+.container-option {
   display: flex;
   gap: 2.5rem;
   flex-wrap: wrap;
