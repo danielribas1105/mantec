@@ -1,0 +1,19 @@
+<div class="equipamento modelo ff-roboto-mono" [ngClass]="larguraCard()">
+  <img src="/assets/imagens/icone.png" alt="Tranformador">
+  <p class="texto"><b>{{ equipamento.tipo }}</b></p>
+  <p class="texto">Série: {{ equipamento.serie }}</p>
+  <p class="texto">Fabricante: {{ equipamento.fabricante }}</p>
+  <p class="texto">Local: {{ equipamento.subestacao }}</p>
+  <p class="texto">Data: {{ equipamento.dataEntrega }}</p>
+  <p class="texto">Status: {{ equipamento.status }}</p>
+  <p class="texto">Observações: {{ equipamento.observacao }}</p>
+  <div class="acoes">
+    <button class="botao-editar">
+      <img src="/assets/imagens/icone-editar.png" routerLink="/pensamentos/editarPensamento/{{equipamento.id}}" alt="Ícone de editar">
+    </button>
+    <button class="botao-excluir" routerLink="/pensamentos/excluirPensamento/{{equipamento.id}}">
+      <img src="/assets/imagens/icone-excluir.png" alt="Ícone de excluir">
+    </button>
+  </div>
+</div>
+

@@ -8,6 +8,7 @@ import { InserirEquipamentoComponent } from './components/equipamentos/inserir-e
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ListarEquipamentoComponent } from './components/equipamentos/listar-equipamento/listar-equipamento.component';
+import { EquipamentoComponent } from './components/equipamentos/equipamento/equipamento.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListarEquipamentoComponent } from './components/equipamentos/listar-equ
     CabecalhoComponent,
     RodapeComponent,
     InserirEquipamentoComponent,
-    ListarEquipamentoComponent
+    ListarEquipamentoComponent,
+    EquipamentoComponent
   ],
   imports: [
     BrowserModule,
