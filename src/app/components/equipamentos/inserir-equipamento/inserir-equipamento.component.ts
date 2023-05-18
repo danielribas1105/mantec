@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Equipamento } from '../equipamento';
 
 @Component({
   selector: 'app-inserir-equipamento',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InserirEquipamentoComponent implements OnInit {
 
-  equipamento = {
+  equipamento: Equipamento = {
+    id: 0,
     tipo: 'Reator',
     serie: 'REA001',
     subestacao: 'Colinas',

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Equipamento } from '../equipamento';
 
 @Component({
   selector: 'app-equipamento',
@@ -7,8 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class EquipamentoComponent implements OnInit {
 
-  @Input() equipamento = {
-    id: '',
+  @Input() equipamento: Equipamento = {
+    id: 0,
     tipo: '',
     serie: '',
     subestacao: '',
@@ -22,19 +23,6 @@ export class EquipamentoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  corCard(): String {
-    switch(this.equipamento.fabricante){
-      case 'SIEMENS':
-        return 'modelo1';
-      case 'GE':
-        return 'modelo2';
-      case 'ABB':
-        return 'modelo3';
-      default:
-        return 'modelo1';
-    }
   }
 
   larguraCard(): String {

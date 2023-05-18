@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Equipamento } from '../equipamento';
 
 @Component({
   selector: 'app-listar-equipamento',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarEquipamentoComponent implements OnInit {
 
-  listaEquipamentos = [
+  listaEquipamentos: Equipamento[] = [
     {
-      id: '1',
-      tipo: 'Reator',
+      id: 1,
+      tipo: 'Reator Anterior',
       serie: 'REA001',
       subestacao: 'Colinas',
       dataEntrega: '01/01/2000',
@@ -20,8 +21,8 @@ export class ListarEquipamentoComponent implements OnInit {
       observacao: ''
     },
     {
-      id: '2',
-      tipo: 'Reator',
+      id: 2,
+      tipo: 'Reator Anterior',
       serie: 'REA002',
       subestacao: 'Colinas',
       dataEntrega: '01/01/2000',
@@ -31,8 +32,8 @@ export class ListarEquipamentoComponent implements OnInit {
       observacao: ''
     },
     {
-      id: '3',
-      tipo: 'Transformador',
+      id: 3,
+      tipo: 'Transformador Anterior',
       serie: 'TRA001',
       subestacao: 'Colinas',
       dataEntrega: '01/01/2000',
