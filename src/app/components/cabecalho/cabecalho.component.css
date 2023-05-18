@@ -1,0 +1,33 @@
+.cabecalho {
+  background: url(/assets/imagens/fundo-cabecalho.png);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho .titulo {
+  width: 40%;
+  padding: 2rem 3rem;
+}
+
+.cabecalho .imagem{
+  width: 25%;
+}
+
+.cabecalho p {
+  font-size: 4rem;
+  color: #093143;
+}
+
+@media (max-width: 576px) {
+  .cabecalho p {
+    font-size: 1.5rem
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecalho .imagem {
+    display: none;
+  }
+}
