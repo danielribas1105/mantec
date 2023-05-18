@@ -1,0 +1,177 @@
+<section class="container inserir-equipamento ff-inter">
+  <header class="header">
+    <h2>Adicione um <br>novo equipamento:</h2>
+  </header>
+  <form>
+    <label for="equipamento">Tipo do equipameto</label>
+    <input
+      type="textarea"
+      class="input"
+      id="equipamento"
+      name="equipamento"
+      placeholder="Informe o tipo de equipamento"
+
+    >
+    <label for="num-serie">Número de série do equipameto</label>
+    <input
+      type="text"
+      class="input"
+      id="num-serie"
+      name="num-serie"
+      placeholder="Informe o número de série"
+
+    >
+    <label for="subestacao">Subestação</label>
+    <input
+      type="text"
+      class="input"
+      id="subestacao"
+      name="subestacao"
+      placeholder="Informe a subestação"
+
+    >
+    <label for="data-entrada">Data da entrada</label>
+    <input
+      type="text"
+      class="input"
+      id="data-entrada"
+      name="data-entrada"
+      placeholder="Digite a data de entrada do equipamento"
+
+    >
+    <br>
+    <label for="modelo">Nível de tensão:</label>
+    <div class="container-tensao">
+      <div class="radio-tensao">
+        <label for="modelo1">
+          <input
+            type="radio"
+            id="modelo1"
+            value="modelo1"
+            name="grupo-tensao"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>500</span>
+        </label>
+      </div>
+
+      <div class="radio-tensao">
+        <label for="modelo2">
+          <input
+            type="radio"
+            id="modelo2"
+            value="modelo2"
+            name="grupo-tensao"
+
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>230</span>
+        </label>
+      </div>
+    </div>
+    <br>
+    <label for="modelo">Selecione o fabricante:</label>
+    <div class="container-fabricante">
+      <div class="radio-fabricante">
+        <label for="modelo1">
+          <input
+            type="radio"
+            id="modelo1"
+            value="modelo1"
+            name="grupo-fabricante"
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>SIEMENS</span>
+        </label>
+      </div>
+
+      <div class="radio-fabricante">
+        <label for="modelo2">
+          <input
+            type="radio"
+            id="modelo2"
+            value="modelo2"
+            name="grupo-fabricante"
+
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>GE</span>
+        </label>
+      </div>
+
+      <div class="radio-modelo">
+        <label for="modelo3">
+          <input
+            type="radio"
+            id="modelo3"
+            value="modelo3"
+            name="grupo-fabricante"
+
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>ABB</span>
+        </label>
+      </div>
+    </div>
+    <br>
+    <label for="modelo">Status:</label>
+    <div class="container-status">
+      <div class="radio-status">
+        <label for="modelo1">
+          <input
+            type="radio"
+            id="modelo1"
+            value="modelo1"
+            name="modelo-card"
+
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>ATIVO</span>
+        </label>
+      </div>
+
+      <div class="radio-status">
+        <label for="modelo2">
+          <input
+            type="radio"
+            id="modelo2"
+            value="modelo2"
+            name="modelo-card"
+
+          >
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>NÃO ATIVO</span>
+        </label>
+      </div>
+    </div>
+    <br>
+    <label for="observacoes">Observações</label>
+    <input
+      type="text"
+      class="input"
+      id="observacoes"
+      name="observacoes"
+      placeholder="Campo para observações"
+
+    >
+    <div class="acoes">
+      <button  class="botao">Salvar</button>
+      <button  class="botao">Cancelar</button>
+    </div>
+  </form>
+</section>
+
