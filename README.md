@@ -1,6 +1,12 @@
-# Mantec
+# Projeto Mantec
+Projeto de front-end gerado atrvés do [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
+# Objetivos
+Desenvolver uma aplicação para controle dos equipamentos da empresa X.
+
+# Objetivos
+
+Desenvolver uma aplicação para controle dos equipamentos da empresa X.
 
 ## Development server
 
