@@ -1,17 +1,22 @@
 .acoes {
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .botao {
   margin: 5px;
+  margin-top: 70px;
+  width: 200px;
+  font-size: 1rem;
 }
 
-.editar-pensamentos {
+.inserir-equipamento {
   padding: 2rem 0;
 }
 
-.editar-pensamentos form {
+.inserir-equipamento form {
   background: #C4EDFF;
 
   border: none;
@@ -23,29 +28,31 @@
   padding: 2rem;
 }
 
-.editar-pensamentos form label {
-  color: #154580;
+.inserir-equipamento form label {
+  color: #093143;
   font-weight: bold;
   margin: 0 0 1rem;
 }
 
-.editar-pensamentos form .input {
+.inserir-equipamento form .input {
   border: none;
   height: 40px;
   padding: 1rem 2rem;
   border-radius: 20px;
   margin: 0.5rem 0 2rem;
+  font-size: 1rem;
 }
 
 
-.editar-pensamentos form .textarea {
+.inserir-equipamento form .textarea {
   border: none;
   padding: 1rem 2rem;
   border-radius: 20px;
   margin: 0.5rem 0 2rem;
+  font-size: 1rem;
 }
 
-.container-radio {
+.container-option {
   display: flex;
   gap: 2.5rem;
   flex-wrap: wrap;
@@ -100,7 +107,7 @@ input[type='radio'] {
 }
 
 .custom-radio {
-  border: 1px solid #154580;
+  border: 1px solid #093143;
   width: 30px;
   height: 30px;
   display: grid;
@@ -111,7 +118,7 @@ input[type='radio'] {
 .custom-radio,
 span {
   transition: 0.5s ease;
-  color: #154580;
+  color: #093143;
 }
 
 .custom-radio span {
@@ -123,9 +130,9 @@ span {
 }
 
 input[type='radio']:checked+.custom-radio {
-  border-color: #154580;
+  border-color: #093143;
 }
 
 input[type='radio']:checked+.custom-radio span {
-  background: #154580;
+  background: #093143;
 }

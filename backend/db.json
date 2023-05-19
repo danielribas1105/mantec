@@ -54,6 +54,28 @@
       "fabricante": "GE",
       "status": "ATIVO",
       "observacao": ""
+    },
+    {
+      "id": 6,
+      "tipo": "Transformador",
+      "serie": "TRA004",
+      "subestacao": "Colinas",
+      "dataEntrega": "01/01/2000",
+      "tensao": "230",
+      "fabricante": "GE",
+      "status": "ATIVO",
+      "observacao": ""
+    },
+    {
+      "id": 7,
+      "tipo": "Transformador",
+      "serie": "TRA005",
+      "subestacao": "Samambaia",
+      "dataEntrega": "01/01/2000",
+      "tensao": "230",
+      "fabricante": "GE",
+      "status": "ATIVO",
+      "observacao": ""
     }
   ]
 }
