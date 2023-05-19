@@ -1,5 +1,5 @@
 export interface Equipamento {
-  id: number
+  id?: number
   tipo: string
   serie: string
   subestacao: string

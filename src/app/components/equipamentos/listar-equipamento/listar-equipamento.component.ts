@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Equipamento } from '../equipamento';
+import { EquipamentoService } from '../equipamento.service';
 
 @Component({
   selector: 'app-listar-equipamento',
@@ -8,45 +9,14 @@ import { Equipamento } from '../equipamento';
 })
 export class ListarEquipamentoComponent implements OnInit {
 
-  listaEquipamentos: Equipamento[] = [
-    {
-      id: 1,
-      tipo: 'Reator Anterior',
-      serie: 'REA001',
-      subestacao: 'Colinas',
-      dataEntrega: '01/01/2000',
-      tensao: '500',
-      fabricante: 'SIEMENS',
-      status: 'ATIVO',
-      observacao: ''
-    },
-    {
-      id: 2,
-      tipo: 'Reator Anterior',
-      serie: 'REA002',
-      subestacao: 'Colinas',
-      dataEntrega: '01/01/2000',
-      tensao: '500',
-      fabricante: 'GE',
-      status: 'ATIVO',
-      observacao: ''
-    },
-    {
-      id: 3,
-      tipo: 'Transformador Anterior',
-      serie: 'TRA001',
-      subestacao: 'Colinas',
-      dataEntrega: '01/01/2000',
-      tensao: '500',
-      fabricante: 'GE',
-      status: 'ATIVO',
-      observacao: ''
-    }
-  ];
+  listaEquipamentos: Equipamento[] = [];
 
-  constructor() { }
+  constructor(private service: EquipamentoService) { }
 
   ngOnInit(): void {
+    this.service.listar().subscribe((listaEquipamentos) => {
+      this.listaEquipamentos = listaEquipamentos
+    })
   }
 
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Equipamento } from '../equipamento';
+import { HttpClient } from '@angular/common/http';
+import { EquipamentoService } from '../equipamento.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inserir-equipamento',
@@ -20,13 +23,22 @@ export class InserirEquipamentoComponent implements OnInit {
     observacao: ''
   }
 
-  constructor() { }
+  constructor(
+    private service: EquipamentoService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
   inserirEquipamento() {
-    alert("Equipamento salvo com sucesso!!!")
+    this.service.criar(this.equipamento).subscribe(() => {
+      this.router.navigate(['listarEquipamento'])
+    })
+  }
+
+  cancelarCadastro() {
+    this.router.navigate(['listarEquipamento'])
   }
 
 }

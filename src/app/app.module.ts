@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ListarEquipamentoComponent } from './components/equipamentos/listar-equipamento/listar-equipamento.component';
 import { EquipamentoComponent } from './components/equipamentos/equipamento/equipamento.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExcluirEquipamentoComponent } from './components/equipamentos/excluir-equipamento/excluir-equipamento.component';
+import { EditarEquipamentoComponent } from './components/equipamentos/editar-equipamento/editar-equipamento.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { EquipamentoComponent } from './components/equipamentos/equipamento/equi
     RodapeComponent,
     InserirEquipamentoComponent,
     ListarEquipamentoComponent,
-    EquipamentoComponent
+    EquipamentoComponent,
+    ExcluirEquipamentoComponent,
+    EditarEquipamentoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
