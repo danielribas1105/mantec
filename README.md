@@ -6,6 +6,6 @@ Desenvolver uma aplicação para controle dos equipamentos da empresa Mantec.
 
 # Desenvolvimento
 - [x] Front-end em Angular.
-- [x] Back-end utilizei um arquivo Json, interligando através do Node Serve
+- [x] Back-end utilizando Json e Node
 - [x] Criadas as operações CRUD
 
