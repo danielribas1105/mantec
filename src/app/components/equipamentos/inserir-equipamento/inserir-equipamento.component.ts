@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Equipamento } from '../equipamento';
-import { HttpClient } from '@angular/common/http';
 import { EquipamentoService } from '../equipamento.service';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-inserir-equipamento',
@@ -11,30 +10,47 @@ import { Router } from '@angular/router';
 })
 export class InserirEquipamentoComponent implements OnInit {
 
-  equipamento: Equipamento = {
-    id: 0,
-    tipo: 'Reator',
-    serie: 'REA001',
-    subestacao: 'Colinas',
-    dataEntrega: '01/01/2000',
-    tensao: '230',
-    fabricante: 'GE',
-    status: 'ATIVO',
-    observacao: ''
-  }
+  formulario!: FormGroup;
 
   constructor(
     private service: EquipamentoService,
-    private router: Router
+    private router: Router,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      id: 0,
+      tipo: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      serie: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/),
+        Validators.maxLength(6)
+      ])],
+      subestacao: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      dataEntrega: ['', Validators.compose([
+        Validators.required,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+      tensao: ['', [Validators.required]],
+      fabricante: ['', [Validators.required]],
+      status: ['', [Validators.required]],
+      observacao: ['', [Validators.required]]
+    })
   }
 
   inserirEquipamento() {
-    this.service.criar(this.equipamento).subscribe(() => {
-      this.router.navigate(['listarEquipamento'])
-    })
+    if(this.formulario.valid){
+      this.service.criar(this.formulario.value).subscribe(() => {
+        this.router.navigate(['listarEquipamento'])
+      })
+    }
   }
 
   cancelarCadastro() {

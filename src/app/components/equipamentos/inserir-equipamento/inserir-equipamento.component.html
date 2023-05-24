@@ -2,42 +2,38 @@
   <header class="header">
     <h2>Adicione um <br>novo equipamento:</h2>
   </header>
-  <form>
+  <form [formGroup]="formulario">
     <label for="equipamento">Tipo do equipameto</label>
     <input
       type="textarea"
       class="input"
       id="equipamento"
-      name="equipamento"
+      formControlName="tipo"
       placeholder="Informe o tipo de equipamento"
-      [(ngModel)]="equipamento.tipo"
     >
     <label for="num-serie">Número de série do equipameto</label>
     <input
       type="text"
       class="input"
       id="num-serie"
-      name="num-serie"
+      formControlName="serie"
       placeholder="Informe o número de série"
-      [(ngModel)]="equipamento.serie"
     >
     <label for="subestacao">Subestação</label>
     <input
       type="text"
       class="input"
       id="subestacao"
-      name="subestacao"
+      formControlName="subestacao"
       placeholder="Informe a subestação"
-      [(ngModel)]="equipamento.subestacao"
     >
-    <label for="data-entrada">Data da entrada</label>
+    <label for="data-entrada">Data da entrega</label>
     <input
       type="text"
       class="input"
       id="data-entrada"
-      name="data-entrada"
+      formControlName="dataEntrega"
       placeholder="Digite a data de entrada do equipamento"
-      [(ngModel)]="equipamento.dataEntrega"
     >
     <br>
     <label for="modelo">Nível de tensão:</label>
@@ -47,8 +43,7 @@
           <input
             type="radio"
             value="500"
-            name="grupo-tensao"
-            [(ngModel)]="equipamento.tensao"
+            formControlName="tensao"
           >
           <div class="custom-radio">
             <span></span>
@@ -62,8 +57,7 @@
           <input
             type="radio"
             value="230"
-            name="grupo-tensao"
-            [(ngModel)]="equipamento.tensao"
+            formControlName="tensao"
           >
           <div class="custom-radio">
             <span></span>
@@ -80,8 +74,7 @@
           <input
             type="radio"
             value="SIEMENS"
-            name="grupo-fabricante"
-            [(ngModel)]="equipamento.fabricante"
+            formControlName="fabricante"
           >
           <div class="custom-radio">
             <span></span>
@@ -95,8 +88,7 @@
           <input
             type="radio"
             value="GE"
-            name="grupo-fabricante"
-            [(ngModel)]="equipamento.fabricante"
+            formControlName="fabricante"
           >
           <div class="custom-radio">
             <span></span>
@@ -110,8 +102,7 @@
           <input
             type="radio"
             value="ABB"
-            name="grupo-fabricante"
-            [(ngModel)]="equipamento.fabricante"
+            formControlName="fabricante"
           >
           <div class="custom-radio">
             <span></span>
@@ -128,8 +119,7 @@
           <input
             type="radio"
             value="ATIVO"
-            name="grupo-status"
-            [(ngModel)]="equipamento.status"
+            formControlName="status"
           >
           <div class="custom-radio">
             <span></span>
@@ -143,8 +133,7 @@
           <input
             type="radio"
             value="NÃO ATIVO"
-            name="grupo-status"
-            [(ngModel)]="equipamento.status"
+            formControlName="status"
           >
           <div class="custom-radio">
             <span></span>
@@ -159,9 +148,8 @@
       type="text"
       class="input"
       id="observacoes"
-      name="observacoes"
+      formControlName="observacao"
       placeholder="Campo para observações"
-      [value]="equipamento.observacao"
     >
     <div class="acoes">
       <button (click)="inserirEquipamento()" class="botao">Salvar</button>
