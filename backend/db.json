@@ -76,28 +76,6 @@
       "fabricante": "GE",
       "status": "ATIVO",
       "observacao": ""
-    },
-    {
-      "id": 8,
-      "tipo": "eerrttt",
-      "serie": "eeeeee",
-      "subestacao": "eeeee",
-      "dataEntrega": "eeeeeee",
-      "tensao": "",
-      "fabricante": "",
-      "status": "",
-      "observacao": ""
-    },
-    {
-      "id": 9,
-      "tipo": "tttttt",
-      "serie": "tttttt",
-      "subestacao": "ttttttt",
-      "dataEntrega": "tttttt",
-      "tensao": "500",
-      "fabricante": "GE",
-      "status": "NÃO ATIVO",
-      "observacao": ""
     }
   ]
 }

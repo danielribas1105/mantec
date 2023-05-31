@@ -11,6 +11,11 @@
       formControlName="tipo"
       placeholder="Informe o tipo de equipamento"
     >
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('tipo')?.errors &&
+              formulario.get('tipo')?.touched">
+      Informe o tipo do equipamento!
+    </div>
     <label for="num-serie">Número de série do equipameto</label>
     <input
       type="text"
@@ -19,6 +24,16 @@
       formControlName="serie"
       placeholder="Informe o número de série"
     >
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('serie')?.errors?.['required'] &&
+              formulario.get('serie')?.touched">
+      Informe o número de série do equipamento!
+    </div>
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('serie')?.errors?.['maxlength'] &&
+              formulario.get('serie')?.touched">
+      Número de série incorreto, máximo de 6 caracteres (AAA000)!
+    </div>
     <label for="subestacao">Subestação</label>
     <input
       type="text"
@@ -27,6 +42,11 @@
       formControlName="subestacao"
       placeholder="Informe a subestação"
     >
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('subestacao')?.errors &&
+              formulario.get('subestacao')?.touched">
+      Informe o local de instalação!
+    </div>
     <label for="data-entrada">Data da entrega</label>
     <input
       type="text"
@@ -35,6 +55,11 @@
       formControlName="dataEntrega"
       placeholder="Digite a data de entrada do equipamento"
     >
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('dataEntrega')?.errors &&
+              formulario.get('dataEntrega')?.touched">
+      Informe a data de entrega!
+    </div>
     <br>
     <label for="modelo">Nível de tensão:</label>
     <div class="container-option">
@@ -65,6 +90,11 @@
           <span>230</span>
         </label>
       </div>
+    </div>
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('tensao')?.errors &&
+              formulario.get('tensao')?.touched">
+      Selecione o nível de tensão!
     </div>
     <br>
     <label for="modelo">Selecione o fabricante:</label>
@@ -111,6 +141,11 @@
         </label>
       </div>
     </div>
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('fabricante')?.errors &&
+              formulario.get('fabricante')?.touched">
+      Selecione o fabricante!
+    </div>
     <br>
     <label for="modelo">Status:</label>
     <div class="container-option">
@@ -141,6 +176,11 @@
           <span>NÃO ATIVO</span>
         </label>
       </div>
+    </div>
+    <div class="mensagem__erro"
+      *ngIf="formulario.get('status')?.errors &&
+              formulario.get('status')?.touched">
+      Informe o status!
     </div>
     <br>
     <label for="observacoes">Observações</label>
